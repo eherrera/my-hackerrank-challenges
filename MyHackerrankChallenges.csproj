@@ -42,7 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IChallenge.cs" />
+    <Compile Include="Practice\BirthdayCakeCandles.cs" />
+    <Compile Include="Practice\CompareTheTriplets.cs" />
+    <Compile Include="Practice\DiagonalDifference.cs" />
+    <Compile Include="Practice\MiniMaxSum.cs" />
+    <Compile Include="Practice\PlusMinus.cs" />
+    <Compile Include="Practice\Scores.cs" />
+    <Compile Include="Practice\SockMerchant.cs" />
+    <Compile Include="Practice\StairCase.cs" />
+    <Compile Include="Practice\TimeConversion.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectEuler\ConcealedSquare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
