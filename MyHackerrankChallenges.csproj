@@ -53,7 +53,7 @@
     <Compile Include="Practice\StairCase.cs" />
     <Compile Include="Practice\TimeConversion.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProjectEuler\ConcealedSquare.cs" />
+    <Compile Include="ProjectEulerPlus\ConcealedSquare.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
