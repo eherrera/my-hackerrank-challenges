@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChallenge.cs" />
+    <Compile Include="Practice\AngryProfessor.cs" />
     <Compile Include="Practice\BirthdayCakeCandles.cs" />
     <Compile Include="Practice\CompareTheTriplets.cs" />
     <Compile Include="Practice\DiagonalDifference.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Practice\TimeConversion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectEulerPlus\ConcealedSquare.cs" />
+    <Compile Include="ProjectEulerPlus\IntegerPartitionEquations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

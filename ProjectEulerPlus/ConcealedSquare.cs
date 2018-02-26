@@ -9,8 +9,40 @@ namespace MyHackerrankChallenges.ProjectEulerPlus
         {
             var numberOfKnowDigits = int.Parse(Console.ReadLine());
             var digits = Console.ReadLine();
-            var result = GetConcealedSquare(numberOfKnowDigits, digits.Split(' '));
+            var result = GetConcealedSquare2(numberOfKnowDigits, digits.Split(' '));
             Console.WriteLine(result);  
+        }
+
+        private static long GetConcealedSquare2(int numberOfKnowDigits, string[] digits)
+        {
+            var minValidInteger = long.Parse(string.Join("0", digits));
+            var maxValidInteger = long.Parse(string.Join("9", digits));
+            var minValidIntegerRoot = Convert.ToInt64(Math.Sqrt(minValidInteger));
+            long seq = 0;
+            do
+            {
+                seq = Convert.ToInt64(Math.Pow(minValidIntegerRoot++, 2));
+                if(seq > maxValidInteger)
+                {
+                    return 0;
+                }
+            }
+            while (!ValidSequence(seq, digits));
+            return Convert.ToInt64(Math.Sqrt(seq));
+        }
+
+        private static bool ValidSequence(long sequence, string[] digits)
+        {            
+            var strSeq = sequence.ToString();
+            int j = 0;
+            for (int i = 0; i < strSeq.Length; i+=2)
+            {
+                if(strSeq[i].ToString() != digits[j++])
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         private static long GetConcealedSquare(int numberOfKnowDigits, string[] digits)
