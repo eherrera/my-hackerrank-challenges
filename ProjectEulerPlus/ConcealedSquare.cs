@@ -19,20 +19,33 @@ namespace MyHackerrankChallenges.ProjectEulerPlus
         {
             var minValidInteger = BigInteger.Parse(string.Join("0", digits));
             var maxValidInteger = BigInteger.Parse(string.Join("9", digits));
-            var minValidIntegerRoot = minValidInteger.Sqrt(); 
+            var startAsc = int.Parse(digits[0]) < 5;
+            var minValidIntegerRoot = startAsc ? minValidInteger.Sqrt() : maxValidInteger.Sqrt();
+            // Squares of even numbers are always even numbers and square of odd numbers are always odd. 
+            //var onlyEven = int.Parse(digits[digits.Length - 1]) % 2 == 0;
+            //if (onlyEven && minValidIntegerRoot % 2 != 0)
+            //{
+            //    minValidIntegerRoot++;
+            //}
             BigInteger seq = 0;
             do
             {
                 seq = minValidIntegerRoot * minValidIntegerRoot;
-                minValidIntegerRoot++;
-                if (seq > maxValidInteger)
+                if (ValidSequence(seq, digits))
+                {
+                    return minValidIntegerRoot;
+                }
+                if ((startAsc && seq > maxValidInteger) || (!startAsc && seq <= minValidInteger))
                 {
                     return 0;
                 }
+                
+                minValidIntegerRoot += startAsc ? 1 : -1;
+
             }
-            while (!ValidSequence(seq, digits));
-            return seq.Sqrt();
+            while (true);
         }        
+        
 
         private static bool ValidSequence(BigInteger sequence, string[] digits)
         {            
