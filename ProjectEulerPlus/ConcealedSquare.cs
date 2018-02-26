@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Numerics;
 using System.Linq;
+using MyHackerrankChallenges.Helpers;
 
 namespace MyHackerrankChallenges.ProjectEulerPlus
 {
@@ -13,25 +15,26 @@ namespace MyHackerrankChallenges.ProjectEulerPlus
             Console.WriteLine(result);  
         }
 
-        private static long GetConcealedSquare2(int numberOfKnowDigits, string[] digits)
+        private static BigInteger GetConcealedSquare2(int numberOfKnowDigits, string[] digits)
         {
-            var minValidInteger = long.Parse(string.Join("0", digits));
-            var maxValidInteger = long.Parse(string.Join("9", digits));
-            var minValidIntegerRoot = Convert.ToInt64(Math.Sqrt(minValidInteger));
-            long seq = 0;
+            var minValidInteger = BigInteger.Parse(string.Join("0", digits));
+            var maxValidInteger = BigInteger.Parse(string.Join("9", digits));
+            var minValidIntegerRoot = minValidInteger.Sqrt(); 
+            BigInteger seq = 0;
             do
             {
-                seq = Convert.ToInt64(Math.Pow(minValidIntegerRoot++, 2));
-                if(seq > maxValidInteger)
+                seq = minValidIntegerRoot * minValidIntegerRoot;
+                minValidIntegerRoot++;
+                if (seq > maxValidInteger)
                 {
                     return 0;
                 }
             }
             while (!ValidSequence(seq, digits));
-            return Convert.ToInt64(Math.Sqrt(seq));
-        }
+            return seq.Sqrt();
+        }        
 
-        private static bool ValidSequence(long sequence, string[] digits)
+        private static bool ValidSequence(BigInteger sequence, string[] digits)
         {            
             var strSeq = sequence.ToString();
             int j = 0;
