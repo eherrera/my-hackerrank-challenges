@@ -49,6 +49,7 @@
     <Compile Include="Practice\BirthdayCakeCandles.cs" />
     <Compile Include="Practice\CompareTheTriplets.cs" />
     <Compile Include="Practice\DiagonalDifference.cs" />
+    <Compile Include="Practice\Kangaroo.cs" />
     <Compile Include="Practice\MiniMaxSum.cs" />
     <Compile Include="Practice\PlusMinus.cs" />
     <Compile Include="Practice\Scores.cs" />
