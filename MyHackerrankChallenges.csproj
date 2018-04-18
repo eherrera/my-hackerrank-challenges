@@ -52,6 +52,7 @@
     <Compile Include="Practice\DiagonalDifference.cs" />
     <Compile Include="Practice\FindDigits.cs" />
     <Compile Include="Practice\Kangaroo.cs" />
+    <Compile Include="Practice\MigratoryBirds.cs" />
     <Compile Include="Practice\MiniMaxSum.cs" />
     <Compile Include="Practice\PlusMinus.cs" />
     <Compile Include="Practice\Scores.cs" />
