@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking\SupportOperators.cs" />
     <Compile Include="Helpers\Util.cs" />
     <Compile Include="IChallenge.cs" />
     <Compile Include="Practice\AngryProfessor.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Practice\CompareTheTriplets.cs" />
     <Compile Include="Practice\DiagonalDifference.cs" />
     <Compile Include="Practice\FindDigits.cs" />
+    <Compile Include="Practice\IEnumerable.cs" />
     <Compile Include="Practice\Kangaroo.cs" />
     <Compile Include="Practice\MigratoryBirds.cs" />
     <Compile Include="Practice\MiniMaxSum.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="Practice\Scores.cs" />
     <Compile Include="Practice\SockMerchant.cs" />
     <Compile Include="Practice\StairCase.cs" />
+    <Compile Include="Practice\Testing.cs" />
     <Compile Include="Practice\TimeConversion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectEulerPlus\ConcealedSquare.cs" />

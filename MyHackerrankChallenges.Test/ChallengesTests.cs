@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using MyHackerrankChallenges.Booking;
 using MyHackerrankChallenges.Practice;
 
 namespace MyHackerrankChallenges.Test
@@ -42,6 +43,38 @@ namespace MyHackerrankChallenges.Test
             var expectedResult = 4;
             var actualResult = bc.solve(5, new int[] { 1, 2, 1, 2, 1 }, 3, 2);
             Assert.AreEqual(expectedResult, actualResult, delta: expectedResult / 100);
+        }
+
+        #endregion
+
+        #region SupportOperators
+
+        [TestMethod]
+        public void SupportOperatorsOverlaping1()
+        {
+            var ranges = new[]
+            {
+                new[] {1, 6},
+                new[] {1, 5},
+                new[] {2, 10},
+            };
+            var result = SupportOperators.OperatorsNeeded(1, ranges);
+            const int expectedResult = 1;
+            Assert.AreEqual(expectedResult, result);    
+        }
+
+        [TestMethod]
+        public void SupportOperatorsNoOverlaping()
+        {
+            var ranges = new[]
+            {
+                new[] {7, 10},
+                new[] {1, 5},
+                new[] {11, 12},
+            };
+            var result = SupportOperators.OperatorsNeeded(0, ranges);
+            const int expectedResult = 0;
+            Assert.AreEqual(expectedResult, result);
         }
 
         #endregion
