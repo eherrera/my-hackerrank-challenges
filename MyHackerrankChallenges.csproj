@@ -48,6 +48,7 @@
     <Compile Include="IChallenge.cs" />
     <Compile Include="Practice\AngryProfessor.cs" />
     <Compile Include="Practice\AppleAndOrange.cs" />
+    <Compile Include="Practice\BetweenTwoSets.cs" />
     <Compile Include="Practice\BirthdayCakeCandles.cs" />
     <Compile Include="Practice\BirthdayChocolate.cs" />
     <Compile Include="Practice\CompareTheTriplets.cs" />
