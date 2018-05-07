@@ -51,9 +51,11 @@
     <Compile Include="Practice\BetweenTwoSets.cs" />
     <Compile Include="Practice\BirthdayCakeCandles.cs" />
     <Compile Include="Practice\BirthdayChocolate.cs" />
+    <Compile Include="Practice\BonAppetit.cs" />
     <Compile Include="Practice\CompareTheTriplets.cs" />
     <Compile Include="Practice\DayOfTheProgrammer.cs" />
     <Compile Include="Practice\DiagonalDifference.cs" />
+    <Compile Include="Practice\DrawingBook.cs" />
     <Compile Include="Practice\FindDigits.cs" />
     <Compile Include="Practice\IEnumerable.cs" />
     <Compile Include="Practice\Kangaroo.cs" />
